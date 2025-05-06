@@ -52,7 +52,7 @@ function RecipeFinder() {
   const [cookingPreferences, setCookingPreferences] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Sample recipes for demonstration
+
   const sampleRecipes = [
     {
       id: 1,
@@ -98,7 +98,6 @@ function RecipeFinder() {
   const handleSearch = (e) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
     setTimeout(() => {
       setLoading(false);
     }, 1000);

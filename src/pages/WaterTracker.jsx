@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 function WaterTracker() {
   const [waterIntake, setWaterIntake] = useState(0);
-  const [goal, setGoal] = useState(8); // Default goal: 8 glasses
+  const [goal, setGoal] = useState(8); 
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    // Load saved data from localStorage
     const savedIntake = localStorage.getItem('waterIntake');
     const savedGoal = localStorage.getItem('waterGoal');
     const savedHistory = localStorage.getItem('waterHistory');
@@ -21,7 +20,7 @@ function WaterTracker() {
     setWaterIntake(newIntake);
     localStorage.setItem('waterIntake', newIntake.toString());
 
-    // Add to history
+    
     const newHistory = [...history, { amount, timestamp: new Date().toISOString() }];
     setHistory(newHistory);
     localStorage.setItem('waterHistory', JSON.stringify(newHistory));
