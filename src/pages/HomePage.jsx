@@ -16,40 +16,40 @@ function HomePage() {
   return (
     <div className="home-container">
       <div className="hero-section">
-        <h1>Your Personal Health & Nutrition Assistant</h1>
-        <p className="tagline">Discover, Track, and Achieve Your Health Goals</p>
+        <h1>RecipeGenie</h1>
+        <p className="tagline">Your AI-Powered Culinary Companion</p>
         <p className="description">
-          A comprehensive platform that helps you find delicious recipes, track your nutrition,
-          manage your grocery list, and monitor your progress towards a healthier lifestyle.
+          Discover exciting recipes, master new cooking techniques, and elevate your culinary skills
+          with our intelligent recipe and meal planning system.
         </p>
-        <Link to="/recipes" className="get-started-button">Get Started</Link>
+        <Link to="/recipes" className="get-started-button">Start Cooking</Link>
       </div>
 
       <div className="features-container">
         <FeatureCard 
           title="Smart Recipe Finder" 
-          description="Find recipes based on ingredients, nutrition goals, and dietary preferences."
+          description="Input your available ingredients and get creative recipe suggestions that match your cooking style and preferences."
           icon="🔍"
           color="#ff9f43"
           link="/recipes"
         />
         <FeatureCard 
-          title="Water Tracker" 
-          description="Track your daily water intake and stay hydrated throughout the day."
+          title="Water Intake Tracker" 
+          description="Stay hydrated while cooking with our smart water tracking system and timely reminders."
           icon="💧"
           color="#0abde3"
           link="/water"
         />
         <FeatureCard 
-          title="Grocery List" 
-          description="Create and manage your shopping list with smart organization."
+          title="Smart Grocery List" 
+          description="Generate organized shopping lists based on your meal plans and keep track of your kitchen essentials."
           icon="🛒"
           color="#10ac84"
           link="/grocery"
         />
         <FeatureCard 
           title="Progress Tracker" 
-          description="Monitor your nutrition goals and track your daily meals."
+          description="Track your culinary journey with daily and weekly summaries of your cooking adventures and achievements."
           icon="📊"
           color="#ee5253"
           link="/progress"
@@ -57,9 +57,9 @@ function HomePage() {
       </div>
 
       <div className="get-started-section">
-        <h2>Start Your Healthy Journey Today</h2>
-        <p>Join thousands of users who are discovering delicious recipes and tracking their nutrition goals.</p>
-        <Link to="/recipes" className="get-started-button">Find Recipes</Link>
+        <h2>Your Culinary Journey Begins Here</h2>
+        <p>Join thousands of home chefs who are exploring new flavors and mastering the art of cooking with RecipeGenie.</p>
+        <Link to="/recipes" className="get-started-button">Start Your Culinary Adventure</Link>
       </div>
     </div>
   );
