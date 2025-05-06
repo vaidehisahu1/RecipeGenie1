@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function RecipeCard({ recipe }) {
   const addToGroceryList = () => {
     alert('This feature will be available soon!');
@@ -11,7 +12,7 @@ function RecipeCard({ recipe }) {
 
   return (
     <div className="recipe-card">
-      <img src={recipe.image} alt={recipe.title} className="recipe-image" />
+   
       <div className="recipe-content">
         <h3>{recipe.title}</h3>
         <div className="recipe-meta">
@@ -55,8 +56,8 @@ function RecipeFinder() {
   const sampleRecipes = [
     {
       id: 1,
-      title: "Classic Coq au Vin",
-      image: "https://via.placeholder.com/300x200",
+      title: "Cheese Pasta",
+     
       readyInMinutes: 120,
       servings: 4,
       difficulty: "Medium",
@@ -68,8 +69,8 @@ function RecipeFinder() {
     },
     {
       id: 2,
-      title: "Handmade Pasta Primavera",
-      image: "https://via.placeholder.com/300x200",
+      title: "Paneer Tikka",
+     
       readyInMinutes: 90,
       servings: 2,
       difficulty: "Advanced",
@@ -78,6 +79,19 @@ function RecipeFinder() {
       temperature: "Boiling",
       description: "Master the art of fresh pasta making with this spring-inspired dish featuring homemade fettuccine and seasonal vegetables.",
       tags: ["Italian", "Fresh Pasta", "Seasonal"]
+    },
+    {
+      id: 3,
+      title: "Tacos",
+     
+      readyInMinutes: 45,
+      servings: 2,
+      difficulty: "Medium",
+      chefLevel: "Intermediate",
+      cookingMethod: "Pan-Seared",
+      temperature: "Medium-High",
+      description: "A delicate sea bass fillet with crispy skin, served with a citrus butter sauce and fresh herbs. Perfect for mastering fish cooking techniques.",
+      tags: ["Seafood", "Quick", "Elegant"]
     }
   ];
 
@@ -116,16 +130,21 @@ function RecipeFinder() {
           that match your cooking style and culinary preferences.
         </p>
         <form className="search-container" onSubmit={handleSearch}>
-          <div className="ingredients-input">
-            <input 
-              type="text" 
-              placeholder="Enter ingredients (e.g., chicken, herbs, vegetables)" 
-              className="search-input"
-              value={ingredients}
-              onChange={(e) => setIngredients(e.target.value)}
-            />
+          <div className="search-row">
+            <div className="ingredients-input">
+              <input 
+                type="text" 
+                placeholder="Enter ingredients (e.g., chicken, herbs, vegetables)" 
+                className="search-input"
+                value={ingredients}
+                onChange={(e) => setIngredients(e.target.value)}
+              />
+            </div>
+            <button type="submit" className="search-button">
+              {loading ? 'Finding...' : 'Find'}
+            </button>
           </div>
-          <div className="dietary-preferences">
+          <div className="cooking-preferences">
             <h3>Cooking Style</h3>
             <div className="preference-tags">
               {cookingOptions.map((option) => (
@@ -140,9 +159,6 @@ function RecipeFinder() {
               ))}
             </div>
           </div>
-          <button type="submit" className="search-button">
-            {loading ? 'Finding Recipes...' : 'Find Recipes'}
-          </button>
         </form>
       </div>
 
@@ -167,7 +183,7 @@ function RecipeFinder() {
           <ul>
             <li>List main ingredients you have in your pantry</li>
             <li>Specify your preferred cooking style or cuisine</li>
-            <li>Include any cooking equipment you'd like to use</li>
+         
             <li>Mention your desired cooking time or complexity level</li>
           </ul>
         </div>
