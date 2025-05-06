@@ -116,7 +116,7 @@ html, body {
   font-size: 3rem;
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #ff9f43, #ee5253);
-  -webkit-background-clip: text;
+ 
   -webkit-text-fill-color: transparent;
 }
 
